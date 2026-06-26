@@ -9,7 +9,7 @@ class AuditController {
             if (!company_name || !email || !website_url || !service_type) {
                 return resp.status(404).json({
                     success: false,
-                    message: "Please fill in the required field",
+                    message: "Please fill in the required field"
                 })
             }
             const result = await AuditServices.submitAudit({ company_name, email, website_url, service_type })
